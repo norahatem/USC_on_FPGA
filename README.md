@@ -36,3 +36,12 @@ The optimised models were translated into FPGA implementations using the hls4ml 
 | Optimised QP6 | 50% | 78.2% | 0.975 | No |
 
 *Performance evaluation of quantised (Q6) and pruned (QP6) model variations across different sparsity levels. Accuracy is reported alongside the performance ratio relative to the floating-point baseline reference (Baseline Accuracy = 80.2%).*
+
+---
+
+| Model | Latency ($\mu s$) | II ($\mu s$) | Accuracy | Power (W) |
+| :--- | :---: | :---: | :---: | :---: |
+| Optimised | 104.5 | 30.9 | 78.1% | 0.412 |
+| Reference | 107 | 31.5 | 82.1% | 0.664 |
+
+*Post-synthesis performance for the Optimised and Reference designs. Both models utilise a Reuse Factor (RF ) of 50 and are clocked at 100 MHz.*
