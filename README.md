@@ -20,3 +20,19 @@ The optimised models were translated into FPGA implementations using the hls4ml 
 
 ---
 
+| Model | Sparsity | Accuracy | $\frac{\text{Accuracy}}{\text{Baseline Accuracy}}$ | Use Bias |
+| :--- | :---: | :---: | :---: | :---: |
+| Reference FP | 0% | 80.2% | 1.0 | Yes |
+| Optimised FP | 0% | 79.5% | 0.991 | Yes |
+| Reference Q6 | 0% | 80.6% | 1.00 | Yes |
+| Reference QP6 | 25% | 81.9% | 1.02 | Yes |
+| Reference QP6 | 50% | 81.8% | 1.02 | Yes |
+| Reference QP6 | 60% | 82.2% | 1.025 | Yes |
+| Optimised Q6 | 0% | 77.4% | 0.965 | Yes |
+| Optimised QP6 | 25% | 77.7% | 0.969 | Yes |
+| Optimised QP6 | 50% | 78.8% | 0.981 | Yes |
+| Optimised Q6 | 0% | 76.7% | 0.956 | No |
+| Optimised QP6 | 25% | 78.0% | 0.973 | No |
+| Optimised QP6 | 50% | 78.2% | 0.975 | No |
+
+*Performance evaluation of quantised (Q6) and pruned (QP6) model variations across different sparsity levels. Accuracy is reported alongside the performance ratio relative to the floating-point baseline reference (Baseline Accuracy = 80.2%).*
