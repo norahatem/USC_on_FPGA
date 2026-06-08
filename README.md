@@ -39,6 +39,20 @@ The optimised models were translated into FPGA implementations using the hls4ml 
 
 ---
 
+| Model | Strategy | RF | DSP | LUT | FF | BRAM | Latency (cc) | II (cc) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Optimised | Latency | 1 | 17 | 85468 | 51189 | 43.5 | 955 | 264 |
+| Optimised | DA | 1 | 0 | 55713 | 20556 | 41 | 709 | 197 |
+| Optimised | Resource | 1 | 9 | 86958 | 31866 | 43.5 | 2023 | 592 |
+| Optimised | Resource | 50 | 30 | 31888 | 26977 | 68 | 10451 | 3088 |
+| Reference | Resource | 1 | 41 | 104535 | 55146 | 52.5 | 2233 | 656 |
+| Reference | Resource | 50 | 32 | 38496 | 33090 | 83 | 10699 | 3152 |
+| **Available** | | | **240** | **63400** | **126800** | **135** | | |
+
+*Synthesis results for the Reference and Optimised models across various implementation strategies. The table shows the impact of the Reuse Factor (RF) and implementation strategy on resource utilisation (DSP, LUT, BRAM) and timing performance (Latency and Initiation Interval). All models are compiled for a target clock frequency $f_{clk}$ = 100 MHz.*
+
+---
+
 | Model | Latency ($\mu s$) | II ($\mu s$) | Accuracy | Power (W) |
 | :--- | :---: | :---: | :---: | :---: |
 | Optimised | 104.5 | 30.9 | 78.1% | 0.412 |
